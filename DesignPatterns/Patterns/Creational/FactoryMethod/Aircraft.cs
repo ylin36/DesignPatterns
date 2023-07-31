@@ -21,7 +21,6 @@ namespace DesignPatterns.Patterns.Creational.FactoryMethod
 				return destination.Length;
 			return 0;
 		}
-
 	}
 }
 
