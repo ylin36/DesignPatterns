@@ -1,7 +1,7 @@
 ﻿using System;
 namespace DesignPatterns.Patterns.Creational.Builder
 {
-	public interface IAirCraft
+	public interface IAircraft
 	{
 		/// <summary>
 		/// Flies the aircraft to the destination

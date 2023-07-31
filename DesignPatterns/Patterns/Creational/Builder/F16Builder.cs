@@ -25,7 +25,7 @@ namespace DesignPatterns.Patterns.Creational.Builder
             _f16.Wings = "Fighter wings";
         }
 
-        public override IAirCraft GetResult()
+        public override IAircraft GetResult()
         {
             return _f16;
         }

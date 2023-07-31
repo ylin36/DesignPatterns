@@ -28,7 +28,7 @@ namespace DesignPatterns.Patterns.Creational.Builder
 
 		}
 
-		abstract public IAirCraft GetResult();
+		abstract public IAircraft GetResult();
 	}
 }
 

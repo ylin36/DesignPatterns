@@ -1,7 +1,8 @@
-﻿using System.Reflection;
+﻿using System;
+using System.Reflection;
 using NLog;
 // Microsoft.Extension.Logging DI
-using NLog.Extensions.Logging; 
+using NLog.Extensions.Logging;
 
 // Early init of NLog to allow startup and exception logging, before host is built
 var logger = LogManager.Setup().GetCurrentClassLogger();
@@ -10,8 +11,6 @@ logger.Info("Init program");
 try
 {
     var builder = WebApplication.CreateBuilder(args);
-
-    // Add services to the container.
 
     builder.Services.AddControllers();
     // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -31,8 +30,19 @@ try
         loggingBuilder.ClearProviders();
         loggingBuilder.AddNLog();
     });
+    builder.Services.Configure<RouteOptions>(option =>
+    {
+        option.LowercaseUrls = true;
+        option.LowercaseQueryStrings = true;
+    });
 
     var app = builder.Build();
+
+    // use a pathBase url to allow for reverse proxy with routes.
+    // also add launchUrl": "design-patterns/swagger" to launchsettings.json to load swagger page on development
+    var pathBase = "design-patterns";
+
+    app.UsePathBase($"/{pathBase}");
 
     app.UseSwagger();
     app.UseSwaggerUI();

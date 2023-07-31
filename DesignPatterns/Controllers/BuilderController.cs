@@ -5,7 +5,7 @@ namespace DesignPatterns.Controllers
 {
     [ApiController]
     [Route("/api/v1/[controller]")]
-    public class BuilderPatternController : ControllerBase
+    public class BuilderController : ControllerBase
     {
         private readonly ILogger<WeatherForecastController> _logger;
 
@@ -13,7 +13,7 @@ namespace DesignPatterns.Controllers
         /// New instance of controller is created for each api call.
         /// </summary>
         /// <param name="logger"></param>
-        public BuilderPatternController(ILogger<WeatherForecastController> logger)
+        public BuilderController(ILogger<WeatherForecastController> logger)
         {
             _logger = logger;
         }
@@ -45,7 +45,7 @@ namespace DesignPatterns.Controllers
 
                 // for testability consider taking the director and builder using a factory dependency injection
                 var builder = new F16Builder();
-                var director = new Director(builder);
+                var director = new AirCraftDirector(builder);
                 director.Construct(false);
                 return Ok((F16)builder.GetResult());
             }
@@ -68,7 +68,7 @@ namespace DesignPatterns.Controllers
         /// </remarks>
         /// <response code="200">Returns a Being747 jet</response>
         /// <response code="500">unexcepted internal error</response>
-        [HttpGet("beoing747")]
+        [HttpGet("boeing747")]
         [Produces("application/json")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
@@ -76,8 +76,8 @@ namespace DesignPatterns.Controllers
         {
             try
             {
-                var builder = new F16Builder();
-                var director = new Director(builder);
+                var builder = new Boeing747Builder();
+                var director = new AirCraftDirector(builder);
                 director.Construct(false);
                 return Ok((Boeing747)builder.GetResult());
             }
@@ -112,7 +112,7 @@ namespace DesignPatterns.Controllers
             try
             {
                 var builder = new F16Builder();
-                var director = new Director(builder);
+                var director = new AirCraftDirector(builder);
                 director.Construct(false);
                 var boeing747 = builder.GetResult();
                 return StatusCode(201, boeing747.Fly(destination));

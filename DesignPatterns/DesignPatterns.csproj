@@ -28,6 +28,7 @@
     <None Remove="Patterns\Creational\Prototype\" />
     <None Remove="Patterns\Creational\Singleton\" />
     <None Remove="Patterns\Creational\AbstractFactory\" />
+    <None Remove="Patterns\Creational\FactoryMethod\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Patterns\" />
@@ -38,5 +39,6 @@
     <Folder Include="Patterns\Creational\Prototype\" />
     <Folder Include="Patterns\Creational\Singleton\" />
     <Folder Include="Patterns\Creational\AbstractFactory\" />
+    <Folder Include="Patterns\Creational\FactoryMethod\" />
   </ItemGroup>
 </Project>

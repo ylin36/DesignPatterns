@@ -30,7 +30,7 @@ namespace DesignPatterns.Patterns.Creational.Builder
             _boeing747.Wings = "Commercial wings";
         }
 
-        public override IAirCraft GetResult()
+        public override IAircraft GetResult()
         {
             return _boeing747;
         }

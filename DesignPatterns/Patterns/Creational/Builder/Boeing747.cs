@@ -1,7 +1,7 @@
 ﻿using System;
 namespace DesignPatterns.Patterns.Creational.Builder
 {
-    public class Boeing747 : IAirCraft
+    public class Boeing747 : IAircraft
     {
         public string Engine { get; set; } = string.Empty;
         public string Cockpit { get; set; } = string.Empty;
