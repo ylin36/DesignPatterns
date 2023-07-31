@@ -111,7 +111,7 @@ namespace DesignPatterns.Controllers
         {
             try
             {
-                var builder = new F16Builder();
+                var builder = new Boeing747Builder();
                 var director = new AirCraftDirector(builder);
                 director.Construct(false);
                 var boeing747 = builder.GetResult();
