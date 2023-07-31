@@ -3,7 +3,8 @@ namespace DesignPatterns.Patterns.Creational.AbstractFactory
 {
 	public class Boeing747Wings : IWings
 	{
-        bool _isDeployed;
+        private bool _isDeployed;
+
 		public Boeing747Wings()
 		{
 		}

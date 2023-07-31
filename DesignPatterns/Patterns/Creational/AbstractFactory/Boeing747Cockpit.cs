@@ -3,8 +3,8 @@ namespace DesignPatterns.Patterns.Creational.AbstractFactory
 {
 	public class Boeing747Cockpit : ICockpit
 	{
-
         private bool _isOpen;
+
 		public Boeing747Cockpit()
 		{
 		}
