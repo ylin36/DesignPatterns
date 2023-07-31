@@ -18,10 +18,7 @@ namespace DesignPatterns.Patterns.Behavioral.Iterator
             Reset();
 		}
 
-        public override object Current()
-        {
-			return _wordCollection.Items[_position];
-        }
+        public override object Current => _wordCollection.Items[_position];
 
         public override int Key()
         {

@@ -8,11 +8,11 @@ namespace DesignPatterns.Patterns.Behavioral.Iterator
 		{
 		}
 
-		/// <summary>
-		/// return the current element
-		/// </summary>
-		/// <returns></returns>
-		public abstract object Current();
+        /// <summary>
+        /// return the current element
+        /// </summary>
+        /// <returns></returns>
+        public abstract object Current { get; }
 
 		/// <summary>
 		/// move iterator to next element
