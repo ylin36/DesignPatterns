@@ -16,5 +16,6 @@ Contains
 ```
 
 * Note that factory can also be used with DI to create specific implementation of an abstraction during runtime where DI would not know what is needed yet at compile time.
+* Create methods can take in parameters to return different implementations of the result product
 * Example, injecting a factory to create multiple different implementation of a product.
 * DI would otherwise need to inject the many different product in constructor.
