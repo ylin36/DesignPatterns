@@ -87,6 +87,42 @@ namespace DesignPatterns.Controllers
                 return StatusCode(500);
             }
         }
+
+        /// <summary>
+        /// Post a destination to be flew by a Boeing747
+        /// </summary>
+        /// <returns></returns>
+        /// <remarks>
+        /// Sample request:
+        ///
+        ///     Post /boeing747/fly
+        ///     "New York"
+        ///
+        /// </remarks>
+        /// <response code="201">Returns km flew</response>
+        /// <response code="400">Bad Input</response>
+        /// <response code="500">unexcepted internal error</response>
+        [HttpPost("boeing747/fly")]
+        [Produces("application/json")]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public ActionResult<int> PostBoeing747FlyToDestination([FromBody] string destination)
+        {
+            try
+            {
+                var builder = new F16Builder();
+                var director = new Director(builder);
+                director.Construct(false);
+                var boeing747 = builder.GetResult();
+                return StatusCode(201, boeing747.Fly(destination));
+            }
+            catch (Exception e)
+            {
+                _logger.LogError(e.Message);
+                return StatusCode(500);
+            }
+        }
     }
 }
 
