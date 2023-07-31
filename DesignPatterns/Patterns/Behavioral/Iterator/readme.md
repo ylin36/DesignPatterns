@@ -1,0 +1,19 @@
+﻿Iterator Pattern
+* Extract the traversal behavior of a collection into a separate object called an iterator.
+* All iterators must implement the same interface. This makes client code compatible with any collection type.
+* If you need a way to traverse a complex collection, just implement iterator to hide the complexity.
+* C# IEnumerable is an example of iterator pattern. IEnumerable returns an IEnumerator
+
+but traditionally, iterator just need
+interface
+* bool hasNext
+* Profile getNext
+* void reset
+
+Iterator : IEnumerator
+IteratorAggregate : IEnumerable
+
+IEnumberable collection must return an IEnumerator, and instead of implementing itself,
+a good way is to delegates the work to an IEnumerator object that'll act on it.
+
+In this example, the extra abstract class Iterator and IteratorAggregate are not absolutely necessary
