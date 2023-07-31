@@ -5,7 +5,7 @@ namespace DesignPatterns.Patterns.Creational.AbstractFactory
 	{
         private bool _isDeployed;
 
-		public Boeing747Wings()
+	    public Boeing747Wings()
 		{
 		}
 

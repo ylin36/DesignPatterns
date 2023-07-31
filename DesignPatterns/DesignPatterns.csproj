@@ -29,6 +29,24 @@
     <None Remove="Patterns\Creational\Singleton\" />
     <None Remove="Patterns\Creational\AbstractFactory\" />
     <None Remove="Patterns\Creational\FactoryMethod\" />
+    <None Remove="Patterns\Structural\Adapter\" />
+    <None Remove="Patterns\Structural\Bridge\" />
+    <None Remove="Patterns\Structural\Composite\" />
+    <None Remove="Patterns\Structural\Decorator\" />
+    <None Remove="Patterns\Structural\Facade\" />
+    <None Remove="Patterns\Structural\Flyweight\" />
+    <None Remove="Patterns\Structural\Proxy\" />
+    <None Remove="Patterns\Behavioral\ChainOfResponsibility\" />
+    <None Remove="Patterns\Behavioral\Observer\" />
+    <None Remove="Patterns\Behavioral\Interpreter\" />
+    <None Remove="Patterns\Behavioral\Command\" />
+    <None Remove="Patterns\Behavioral\Iterator\" />
+    <None Remove="Patterns\Behavioral\Mediator\" />
+    <None Remove="Patterns\Behavioral\Memento\" />
+    <None Remove="Patterns\Behavioral\State\" />
+    <None Remove="Patterns\Behavioral\Template\" />
+    <None Remove="Patterns\Behavioral\Strategy\" />
+    <None Remove="Patterns\Behavioral\Visitor\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Patterns\" />
@@ -40,5 +58,23 @@
     <Folder Include="Patterns\Creational\Singleton\" />
     <Folder Include="Patterns\Creational\AbstractFactory\" />
     <Folder Include="Patterns\Creational\FactoryMethod\" />
+    <Folder Include="Patterns\Structural\Adapter\" />
+    <Folder Include="Patterns\Structural\Bridge\" />
+    <Folder Include="Patterns\Structural\Composite\" />
+    <Folder Include="Patterns\Structural\Decorator\" />
+    <Folder Include="Patterns\Structural\Facade\" />
+    <Folder Include="Patterns\Structural\Flyweight\" />
+    <Folder Include="Patterns\Structural\Proxy\" />
+    <Folder Include="Patterns\Behavioral\ChainOfResponsibility\" />
+    <Folder Include="Patterns\Behavioral\Observer\" />
+    <Folder Include="Patterns\Behavioral\Interpreter\" />
+    <Folder Include="Patterns\Behavioral\Command\" />
+    <Folder Include="Patterns\Behavioral\Iterator\" />
+    <Folder Include="Patterns\Behavioral\Mediator\" />
+    <Folder Include="Patterns\Behavioral\Memento\" />
+    <Folder Include="Patterns\Behavioral\State\" />
+    <Folder Include="Patterns\Behavioral\Template\" />
+    <Folder Include="Patterns\Behavioral\Strategy\" />
+    <Folder Include="Patterns\Behavioral\Visitor\" />
   </ItemGroup>
 </Project>
