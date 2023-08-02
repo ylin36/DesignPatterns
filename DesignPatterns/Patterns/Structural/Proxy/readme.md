@@ -18,3 +18,4 @@ The most common applications of the Proxy pattern are
 * controlling the access,
 * logging, etc.
 * A Proxy can perform one of these things and then, depending on the result, pass the execution to the same method in a linked RealSubject object.
+* Mock Unit Tests
