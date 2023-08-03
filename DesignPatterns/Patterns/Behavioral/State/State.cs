@@ -19,6 +19,9 @@ namespace DesignPatterns.Patterns.Behavioral.State
 			_context = context;
 		}
 
+		/// <summary>
+		/// deal with what happens when an input takes effect. these can be called Handle or just match the name as the input in context.
+		/// </summary>
 		public abstract void Handle1();
 
 		public abstract void Handle2();
