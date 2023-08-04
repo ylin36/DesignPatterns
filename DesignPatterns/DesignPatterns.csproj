@@ -34,8 +34,8 @@
     <None Remove="Patterns\Behavioral\Mediator\" />
     <None Remove="Patterns\Behavioral\Memento\" />
     <None Remove="Patterns\Behavioral\State\" />
-    <None Remove="Patterns\Behavioral\Template\" />
     <None Remove="Patterns\Behavioral\Strategy\" />
+    <None Remove="Patterns\Behavioral\TemplateMethod\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Patterns\" />
@@ -52,7 +52,7 @@
     <Folder Include="Patterns\Behavioral\Mediator\" />
     <Folder Include="Patterns\Behavioral\Memento\" />
     <Folder Include="Patterns\Behavioral\State\" />
-    <Folder Include="Patterns\Behavioral\Template\" />
     <Folder Include="Patterns\Behavioral\Strategy\" />
+    <Folder Include="Patterns\Behavioral\TemplateMethod\" />
   </ItemGroup>
 </Project>
