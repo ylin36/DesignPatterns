@@ -2,17 +2,24 @@
 namespace DesignPatterns.Patterns.Structural.Proxy
 {
 	/// <summary>
-	/// proxy for the real F16
+	/// proxy for the real F16, so it implements the same interface
 	/// </summary>
 	public class F16Controller : IAircraft
 	{
 		private IAircraft _f16;
 		private ILogger _logger;
-		public F16Controller(IAircraft f16, ILogger<F16Controller> logger)
+        private F16 f16;
+
+        public F16Controller(IAircraft f16, ILogger<F16Controller> logger)
 		{
 			_f16 = f16;
 			_logger = logger;
 		}
+
+        public F16Controller(F16 f16)
+        {
+            this.f16 = f16;
+        }
 
         // The most common applications of the Proxy pattern are lazy loading,
         // caching, controlling the access, logging, etc. A Proxy can perform
