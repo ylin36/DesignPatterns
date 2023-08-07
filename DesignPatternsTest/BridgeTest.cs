@@ -2,7 +2,7 @@
 using DesignPatterns.Patterns.Structural.Bridge;
 namespace DesignPatternsTest
 {
-    public class BridgePattern
+    public class BridgeTest
     {
         [Fact]
         public void Test1()
